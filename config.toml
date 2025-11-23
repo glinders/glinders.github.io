@@ -20,10 +20,8 @@ theme = "hello-friend-ng"
   # Enable to show reading time in minutes for posts
   showReadingTime = false
   # site wide date format, see $.Site.Params.DateFormatSingle and ...List
-  dateFormatSingle = "DFff: 01 Jan 2006"
-  dateFormatList = "DFgg: 01 Jan 2006"
-
-
+  dateFormatSingle = "01 Jan 2006"
+  dateFormatList = "01 Jan 2006"
 
 [languages]
   [languages.en]
@@ -38,10 +36,8 @@ theme = "hello-friend-ng"
     newerPosts = "Newer posts"
     olderPosts = "Older posts"
     minuteReadingTime = "min read"
-    dateFormatSingle = "DFhh: 01 Jan 2006"
-    dateFormatList = "DFii: 01 Jan 2006"
-    DateFormatSingle = "DFjj: 01 Jan 2006"
-    DateFormatList = "DFkk: 01 Jan 2006"
+    dateFormatSingle = "01 Jan 2006"
+    dateFormatList = "01 Jan 2006"
 
     [languages.en.params.logo]
       logoText = "hello friend"
@@ -56,8 +52,15 @@ theme = "hello-friend-ng"
         identifier = "about"
         name = "About"
         url = "/about"
+        weight = "10"
       [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"
         url = "/showcase"
+        weight = "20"
+      [[languages.en.menu.main]]
+        identifier = "archive"
+        name = "Archive"
+        url = "/archive"
+        weight = "100"
 

@@ -1,8 +1,8 @@
----
-title: "Showcase"
-date: "2019-01-18"
-author: "Lorem Ipsum"
----
++++
+title = "Showcase"
+date = "2019-01-18"
+author = "Lorem Ipsum"
++++
 
 ## Header 2
 
