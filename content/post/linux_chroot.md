@@ -2,12 +2,22 @@
 title = "Linux_chroot"
 date = 2025-12-09T07:57:36+13:00
 author = "Geert"
-description = "set up a chroot environment"
+description = "Set up a chroot environment"
 categories = ["Linux"]
-tags = ["chroot"]
-draft = false
+tags = ["chroot", "ldd", ]
+draft = true
 +++
+# what is chroot
+`chroot` stands for "change root". This command changes the root directory (/) for a process and its children.
 
+After calling chroot, the process sees the specified directory as its root filesystem. It cannot access files outside that directory, because `/` now points to the new location.
+
+It is commonly used for:
+- create a sandbox or `chroot jail` to securely run services
+- to build or test software in an isolated environment
+- create a recovery environments (e.g., fix a broken system from a live CD)
+
+# chroot example
 Steps to create a chroot environment for a command. Use `cat` as an example:
 ```bash
 # find out which libraries we need
@@ -27,8 +37,5 @@ sudo chroot cat_chroot/ /bin/cat --version
   cat (GNU coreutils) 9.4
 ```
 
-```bash
-readelf -d /lib/x86_64-linux-gnu/libc.so.6|egrep  '(NEEDED|SONAME)'
-  0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]
-  0x000000000000000e (SONAME)             Library soname: [libc.so.6]
-```
+# ldd
+For a more detailed description of `ldd` see [ldd and readelf]({{< ref "post/linux_ldd_readelf.md" >}})
