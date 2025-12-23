@@ -1,5 +1,5 @@
 +++
-title = "Linux_chroot"
+title = "Linux chroot"
 date = 2025-12-09T07:57:36+13:00
 author = "Geert"
 description = "Set up a chroot environment"

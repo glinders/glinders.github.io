@@ -24,8 +24,8 @@ theme = "hello-friend-ng"
   # Enable to show reading time in minutes for posts
   showReadingTime = false
   # site wide date format, see $.Site.Params.DateFormatSingle and ...List
-  dateFormatSingle = "01 Jan 2006"
-  dateFormatList = "01 Jan 2006"
+  dateFormatSingle = "02 Jan 2006"
+  dateFormatList = "02 Jan 2006"
 
 [languages]
   [languages.en]
@@ -40,8 +40,8 @@ theme = "hello-friend-ng"
     newerPosts = "Newer posts"
     olderPosts = "Older posts"
     minuteReadingTime = "min read"
-    dateFormatSingle = "01 Jan 2006"
-    dateFormatList = "01 Jan 2006"
+    dateFormatSingle = "02 Jan 2006"
+    dateFormatList = "02 Jan 2006"
 
     [languages.en.params.logo]
       logoText = "hello friend"

@@ -3,7 +3,7 @@ title = "U-Boot Stuff"
 date = 2025-11-27T12:34:57+13:00
 author = "Geert"
 description = "Miscellaneous bits of U-Boot knowledge."
-categories = ["Linux", "U-Boot]
+categories = ["Linux", "U-Boot"]
 tags = ["U-Boot", ]
 draft = false
 +++
