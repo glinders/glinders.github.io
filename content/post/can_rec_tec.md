@@ -5,7 +5,7 @@ author = "Geert"
 description = "Description of error counters in CAN FD"
 categories = ["CAN FD"]
 tags = ["REC", "TEC",]
-draft = true
+draft = false
 +++
 
 # Introduction

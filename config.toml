@@ -68,3 +68,13 @@ theme = "hello-friend-ng"
         url = "/archive"
         weight = "100"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+    [markup.goldmark.renderer]
+      # render unsafe HTML code to prevent warnings
+      unsafe = true
+
