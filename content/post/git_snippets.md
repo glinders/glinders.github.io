@@ -61,3 +61,20 @@ $ git submodule set-url <submodule> <new-url>
 $ git submodule sync <submodule>
 ```
 
+# Update a local branch to the remote
+If you want to update a local branch because the remote branch has been updated,
+you can do that in one step instead of switching to the local branch, pull it
+and then switch back to the branch you were on. The shortcut is:
+```bash
+# update another branch
+git fetch origin other-branch:other-branch
+```
+
+# rebase --onto
+This is used to 'move' a branch from one base to another,
+ignoring all the commits between the old base and the new base.
+```bash
+# move branch to a new base
+git rebase --onto <newbase> <oldbase> [<branch>]
+```
+For more details see [How to Fix Your Git Branches After a Rebase](https://www.viget.com/articles/how-to-fix-your-git-branches-after-a-rebase)
