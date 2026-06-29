@@ -99,4 +99,23 @@ $ echo -n "\
 feedc0debabebeefc0ffeedeadbeeffaceb00ccafebabe0badf00d1234567890abcdef1337c0dea1b2c3d45a5a5a5adec0ded0acce55e5defaced00011223344
 ```
 
+# CMAC
+```bash
+echo -n "<hex data>" | xxd -r -p | \
+openssl mac -macopt cipher:aes-<key-size>-cbc -macopt hexkey:<key-hex> CMAC | \
+xxd -p -c 256
+31304645443738303542323336333346364332324445433541333845303730420a
+
+# for truncated CMAC (e.g. first 8 bytes), trim the output (16 hex chars = 8 bytes):
+... | xxd -p -c 256 | cut -c1-16
+```
+Set `<key-size>` to 128, 192 or 256 for CMAC-128, CMAC-192 or CMAC-256.
+
+xamples:
+```bash
+# CMAC using a 128-bit key
+echo -n "00112233445566778899aabbccddeeff" | xxd -r -p | \
+openssl mac -macopt cipher:aes-128-cbc -macopt hexkey:2b7e151628aed2a6abf7158809cf4f3c CMAC | \
+xxd -p -c 256
+```
 
